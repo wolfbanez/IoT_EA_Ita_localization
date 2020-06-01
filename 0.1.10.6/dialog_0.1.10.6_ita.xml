@@ -1,0 +1,265 @@
+﻿<dialog>
+	<speakers>
+		<!-- example entry
+		<speaker>
+			<id>use this id with "speakerId" in dialog entries</id>
+			<video>point this to the video asset file in Unreal. You *MUST* create the asset and point it to the MP4 when adding new mp4s</video>
+			<displayName>the display text to show above the name of the speaker</displayName>
+		</speaker>
+-->
+		<speaker>
+			<id>Councilwoman</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/Council_A_Idle_V.Council_A_Idle_V'</video>
+			<displayName>*Il Consiglio - Aenar Pyr*</displayName>
+      <backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|councilEconomist</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Waste</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/WasteManager_Idle_V.WasteManager_Idle_V'</video>
+			<displayName>*Funzionario gestione rifiuti - Vern Skoll*</displayName>
+      <backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|councilEconomist</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Population</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/HeadOfHumanAssets_Idle_V.HeadOfHumanAssets_Idle_V'</video>
+			<displayName>*Capo degli Asset umani - Laiyo Visk*</displayName>
+      <backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|headOfHumanAssets</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Corporation</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/CorpMonitor_Idle_V.CorpMonitor_Idle_V'</video>
+			<displayName>*Supervisore corporativo - Sciaro Hess*</displayName>
+      <backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|headOfHumanAssets</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Admiral</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/Admiral_Idle_V.Admiral_Idle_V'</video>
+			<displayName>*Ammiraglio - Alexa Carrick*</displayName>
+      <backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|headOfHumanAssets</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>SNES</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/AiEnemy_Idle_V.AiEnemy_Idle_V'</video>
+			<displayName>*Tizio Super Nintendo - Node 0.8.2*</displayName>
+      <backgroundEvent></backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Rebel</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/RebelLeader_Idle_V.RebelLeader_Idle_V'</video>
+			<displayName>*Leader Ribelle - Szoren Coroba*</displayName>
+      <backgroundEvent></backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Spaceport</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/SpaceStation_Idle_V.SpaceStation_Idle_V'</video>
+			<displayName>*Operatore Stazione spaziale - Urlan Fletch*</displayName>
+      <backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|headOfHumanAssets</backgroundEvent>
+		</speaker>
+    <speaker>
+      <id>Power</id>
+      <video>FileMediaSource'/Game/UI/HUD/EventLog/PowerEngineer_Idle_V.PowerEngineer_Idle_V'</video>
+      <displayName>*Ingegnere Sistemi Alimentazione - Ayana Ohk*</displayName>
+      <backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|headOfHumanAssets</backgroundEvent>
+    </speaker>
+    <speaker>
+      <id>RebelA</id>
+      <video>FileMediaSource'/Game/UI/HUD/EventLog/Council_A_Idle_V.Council_A_Idle_V'</video>
+      <displayName>*Leader Ribelle - Non identificato*</displayName>
+      <backgroundEvent></backgroundEvent>
+    </speaker>
+    <speaker>
+      <id>Corrupted</id>
+      <video>FileMediaSource'/Game/UI/HUD/EventLog/CorruptedSignal_Idle_V.CorruptedSignal_Idle_V'</video>
+      <displayName>*Segnale disturbato*</displayName>
+      <backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|corrupted</backgroundEvent>
+    </speaker>
+	</speakers>
+
+  <dialog_entries
+	  delayBetweenQueuedEntries="3"
+	  >
+    <!-- Scenario A is deprecated, concept of scenarios is removed from the game
+    <entry id="Dialog_Titan_Welcome_A" triggerGameWorldTime="4">
+      <page speakerId="Council" event="vo_councilwoman_newgameintro1_01">*Welcome to Titan*, a moon of endless opportunity. There's wealth and power here... for those with the strength to take it.</page>
+      <page speakerId="Council" event="vo_councilwoman_newgameintro1_02">As a new arrival, your first order of business will be to *increase your population*, then *grow your workforce*.</page>
+      <page speakerId="Council" event="vo_councilwoman_newgameintro1_03">To begin, *construct* the appropriate *residential devices* inside your *Headquarters.</page>
+    </entry>
+
+    <entry id="Dialog_Admiral_Intro_A" triggerGameWorldTime="300">
+      <page speakerId="Admiral" event="vo_admiral_ontimer_5minute1_01">Ah. Founder.</page>
+      <page speakerId="Admiral" event="vo_admiral_ontimer_5minute1_02">We'll have to work together if we want to survive on this rock. I'll brief you on your *military responsibilities*.</page>
+      <page speakerId="Admiral" event="vo_admiral_ontimer_5minute1_03">You should start by *preparing some defenses*. If Rebels or a Rival corporation take issue with us, you'll need them.</page>
+    </entry>
+
+    <entry id="Dialog_Enemy_Alert_A" triggerGameWorldTime="360">
+      <page speakerId="Admiral" event="vo_admiral_ontimer_beforefirstattack1_01">Founder, our instruments have sensed *enemies in the area*.</page>
+      <page speakerId="Admiral" event="vo_admiral_ontimer_beforefirstattack1_02">Your main objective should be to *prepare defensive structures*.</page>
+      <page speakerId="Admiral" event="vo_admiral_ontimer_beforefirstattack1_03">You can construct either a *defensive turret* or a *Shipyard*.</page>
+      <page speakerId="Admiral" event="vo_admiral_ontimer_beforefirstattack1_04">The defensive turret will attack any hostiles that invade your territory.</page>
+      <page speakerId="Admiral" event="vo_admiral_ontimer_beforefirstattack1_05">The Shipyard offers a more... hands-on approach. It will allow you to manufacture your own *combat vehicles*.</page>
+    </entry>
+
+    <entry id="Dialog_Enemy_Attack_A" triggerGameWorldTime="1440">
+      <page speakerId="Council" event="vo_councilwoman_firstenemyattacker1_01">When corporations wish to settle disagreements... _outside the boardroom_, the Council requires them to pay a *War Bond*.</page>
+      <page speakerId="Council" event="vo_councilwoman_firstenemyattacker1_02">This corporation has paid their War Bond in full, and *we have authorized them to engage* you.</page>
+      <page speakerId="Council" event="vo_councilwoman_firstenemyattacker1_03">You may *defend yourself* without paying a War Bond. Please... try to minimize collateral damage to your recoverable assets.</page>
+    </entry>
+-->
+
+<!-- Scenario B is deprecated, concept of scenarios is removed from the game,
+    <entry id="Dialog_Titan_Welcome_B" triggerGameWorldTime="4" scenario="B">
+      <page speakerId="Admiral" event="vo_admiral_combatscenariostart1_01">Listen up, Founder! Today we'll be running you through a *combat simulation*!</page>
+      <page speakerId="Admiral" event="vo_admiral_combatscenariostart1_02">We'll cover *combat procedures* and *territory defense*. I think you'll find this a proper test of your abilities.</page>
+      <page speakerId="Admiral" event="vo_admiral_combatscenariostart1_03">Remember, you have a *limited amount of time* to prepare before the enemy engages your forces.</page>
+      <page speakerId="Admiral" event="vo_admiral_combatscenariostart1_04">You've been granted *additional resources* to help ready your defense.</page>
+      <page speakerId="Admiral" event="vo_admiral_combatscenariostart1_05">Now, *prepare yourself* for incoming hostiles!</page>
+    </entry>
+-->
+
+    <!--
+	The timing of this is driven in code, it will be played 1 minute before the
+		 first enemy wave -->
+    <!-- <entry id="Dialog_Enemy_Warning">
+      <page speakerId="Admiral" event="vo_admiral_ontimer_1minbeforefirstattack1_01">Founder. It looks like we got picked up on the enemy's radar!</page>
+      <page speakerId="Admiral" event="vo_admiral_ontimer_1minbeforefirstattack1_02">The *hostiles are preparing to attack*. They will arrive here in *one minute*.</page>
+      <page speakerId="Admiral" event="vo_admiral_ontimer_1minbeforefirstattack1_03">Prepare to engage! Ready all systems and *destroy that enemy bird*!</page>
+    </entry>
+    -->
+
+    <!-- Scenario B is deprecated, concept of scenarios is removed from the game,
+    <entry id="Dialog_Enemy_Attack_B" triggerGameWorldTime="840" scenario="B">
+      <page speakerId="Council" event="vo_councilwoman_firstenemyattacker1_01">When corporations wish to settle disagreements... _outside the boardroom_, the Council requires them to pay a *War Bond*.</page>
+      <page speakerId="Council" event="vo_councilwoman_firstenemyattacker1_02">This corporation has paid their War Bond in full, and *we have authorized them to engage* you.</page>
+      <page speakerId="Council" event="vo_councilwoman_firstenemyattacker1_03">You may *defend yourself* without paying a War Bond. Please... try to minimize collateral damage to your recoverable assets.</page>
+    </entry>
+-->
+    <!--
+    <entry id="Dialog_Enter_HQ" canBeQueued="false">
+      <page speakerId="Council" event="vo_councilwoman_hqfirst1_01">This is your *Headquarters*.</page>
+      <page speakerId="Council" event="vo_councilwoman_hqfirst1_02">I suggest you construct *Habitat Pods* inside this Headquarters. These Pods will provide adequate "storage" for your future population.</page>
+      <page speakerId="Council" event="vo_councilwoman_hqfirst1_03">You can *build the necessary devices* for your start-up operation here, next to your factory equipment.</page>
+      <page speakerId="Council" event="vo_councilwoman_hqfirst1_04">Please, enjoy your new Headquarters. We've ensured that it contains everything you need to advance the Council's goals.</page>
+    </entry>
+
+    <entry id="Dialog_Migrant_Window" canBeQueued="false">
+      <page speakerId="SpaceStation" event="vo_spaceportop_intro1migrant_01">*Spacestation Operations*. Are you the replacement? Oh uh, nevermind about that.</page>
+      <page speakerId="SpaceStation" event="vo_spaceportop_intro1migrant_02">Anyway, I think you're gonna want to hear this information.</page>
+      <page speakerId="SpaceStation" event="vo_spaceportop_intro1migrant_03">You see, the Council provides a new round of ships every few cycles. They're full of *cargo and migrants*.</page>
+      <page speakerId="SpaceStation" event="vo_spaceportop_intro1migrant_04">If you want the contents, you'll have to *place a bid on a ship*.</page>
+      <page speakerId="SpaceStation" event="vo_spaceportop_intro1migrant_05">Hope you last longer than the last newcomer. No uh, seriously, it's rough out there.</page>
+    </entry>
+
+    <entry id="Dialog_Ruins">
+      <page speakerId="Corporation" event="vo_corpmonitor_ruins1_01">Welcome, Founder. I've been assigned as your *Corporation Monitor*.</page>
+      <page speakerId="Corporation" event="vo_corpmonitor_ruins1_02">As you can see, the remains of Titan's former inhabitants sprawl across the surface.</page>
+      <page speakerId="Corporation" event="vo_corpmonitor_ruins1_03">Preliminary scans have shown that they are filled with valuable *resources* and *artifacts*.</page>
+      <page speakerId="Corporation" event="vo_corpmonitor_ruins1_04">But before we can profit from their misfortune, we must first *claim the land* from the Council.</page>
+    </entry>
+
+    <entry id="Dialog_FirstSurveyComplete" canBeQueued="false">
+      <page speakerId="Corporation" event="vo_corpmonitor_survey1_01">I've noted that you have *surveyed* some Ruins.</page>
+      <page speakerId="Corporation" event="vo_corpmonitor_survey1_02">Successful Surveys will tell us what remains within each Ruin.</page>
+      <page speakerId="Corporation" event="vo_corpmonitor_survey1_03">Now, you must decide whether to *Salvage for Resources* or *Extract any Artifacts*.</page>
+    </entry>
+
+    <entry id="Dialog_FirstSalvageComplete" canBeQueued="false">
+      <page speakerId="Corporation" event="vo_corpmonitor_salvagecomplete1_01">Founder, your *salvage* operation was successful.</page>
+      <page speakerId="Corporation" event="vo_corpmonitor_salvagecomplete1_02">The *resources* from these Ruins can be used to *construct devices* and other *buildings*.</page>
+    </entry>
+
+    <entry id="Dialog_FirstExtractComplete" canBeQueued="false">
+      <page speakerId="Corporation" event="vo_corpmonitor_extractcomplete1_01">Founder! We have acquired an *artifact* from a Ruin.</page>
+      <page speakerId="Corporation" event="vo_corpmonitor_extractcomplete1_02">These artifacts can improve our understanding of the prior civilization's technology...</page>
+      <page speakerId="Corporation" event="vo_corpmonitor_extractcomplete1_03">Or we can *sell them to the Council* for future favors.</page>
+    </entry>
+
+    <entry id="Dialog_TrainingStation">
+      <page speakerId="Corporation" event="vo_corpmonitor_training1_01">Founder, I see you're creating a *Conversion Center*.</page>
+      <page speakerId="Corporation" event="vo_corpmonitor_training1_02">You can use this device to *train your population* to become obedient workers who will toil for you endlessly.</page>
+      <page speakerId="Corporation" event="vo_corpmonitor_training1_03">There may be some long term consequences, but it's a voluntary procedure so your conscience is clear!</page>
+    </entry>
+
+    <entry id="Dialog_WinAuction" >
+      <page speakerId="SpaceStation" event="vo_spaceportop_auctionwin_01">Hey uh, this is the Operator.</page>
+      <page speakerId="SpaceStation" event="vo_spaceportop_auctionwin_02">It looks like *you won your first shipment*! You're well on your way to... well, whatever it is that people come here for.</page>
+      <page speakerId="SpaceStation" event="vo_spaceportop_auctionwin_03">We'll be sending the contents to you shortly, so keep an eye on the Spaceport.</page>
+      <page speakerId="SpaceStation" event="vo_spaceportop_auctionwin_04">And if you're not a fan of what you got, don't worry. *There's always next time*.</page>
+    </entry>
+
+    <entry id="Survive_First_Enemy_Attack" >
+      <page speakerId="Admiral" event="vo_admiral_firstwin1_01">Excellent work, Founder. But the *battle is not over* yet! </page>
+      <page speakerId="Admiral" event="vo_admiral_firstwin1_02">Their vessels are only going to get stronger.</page>
+      <page speakerId="Admiral" event="vo_admiral_firstwin1_03">*Strengthen our defenses*! The enemy will return with reinforcements!</page>
+    </entry>
+    <entry id="First_Combat_View">
+		<page speakerId="Admiral" event="vo_admiral_firstcombatview1_01">Don't panic, Founder. You can press Spacebar to pause the simulation at any time.</page>
+		<page speakerId="Admiral" event="vo_admiral_firstcombatview1_02">For starters, target the enemy's devices! You can also attack their crew!</page>
+    </entry>
+
+    <entry id="Construct_Shipyard_First_Time" >
+		<page speakerId="Admiral" event="vo_admiral_firstshipyardconstruct1_01">Your *Shipyard is now complete*.</page>
+		<page speakerId="Admiral" event="vo_admiral_firstshipyardconstruct1_02">Now, let's *head inside* and see what we can do.</page>
+	</entry>
+
+    <entry id="Enter_Shipyard_First_Time" canBeQueued="false">
+		<page speakerId="Admiral" event="vo_admiral_firstshipyardenter1_01">*Welcome to the Shipyard*, Founder! This is where you'll *design your combat vessel*.</page>
+		<page speakerId="Admiral" event="vo_admiral_firstshipyardenter1_02">To start, *choose a hull*. Then, *install all devices necessary* for takeoff.</page>
+		<page speakerId="Admiral" event="vo_admiral_firstshipyardenter1_03">Remember, your crew won't be able to launch your ship unless they can *access all devices*.</page>
+		<page speakerId="Admiral" event="vo_admiral_firstshipyardenter1_04">When you're finished, *press Launch*!</page>
+	</entry>
+
+    <entry id="Construct_Turret_First_Time" >
+		<page speakerId="Admiral" event="vo_admiral_firstturret1_01">Your *Flak Cannon* is now complete!</page>
+		<page speakerId="Admiral" event="vo_admiral_firstturret1_02">This should slow down any attackers... but *you still need more defenses*. Your enemies might come back with reinforcements.</page>
+	</entry>
+
+    <entry id="Launch_First_Ship" canBeQueued="false">
+		<page speakerId="Admiral" event="vo_admiral_firstshiplaunch1_01">Engine check complete! Crew is in position!</page>
+		<page speakerId="Admiral" event="vo_admiral_firstshiplaunch1_02">Clear the area! *We're ready for launch!*</page>
+	</entry>
+
+	<entry id="Lose_HQ">
+		<page speakerId="Council" event="vo_councilwoman_firstlosehq1_01">Founder, it appears that this *rival corporation* intends to "acquire" your remaining assets.</page>
+		<page speakerId="Council" event="vo_councilwoman_firstlosehq1_02">Since they've paid their *War Bond* in full, we are obligated to authorize this... corporate merger.</page>
+		<page speakerId="Council" event="vo_councilwoman_firstlosehq1_03">It is unfortunate, but not every Council investment returns a profit. Perhaps your next enterprise will be more impressive.</page>
+	</entry>
+
+     <entry id="Dialog_CouncilAuctionReminder">
+      <page speakerId="Council" event="vo_councilwoman_migrationticketfirst1_01">The nearby *Spaceport* will soon be operational.</page>
+      <page speakerId="Council" event="vo_councilwoman_migrationticketfirst1_02">Once it opens, you may bid on the contents of incoming cargo ships.</page>
+      <page speakerId="Council" event="vo_councilwoman_migrationticketfirst1_03">Spend enough of your Council *influence*, and the contents of any ship can be yours.</page>
+      <page speakerId="Council" event="vo_councilwoman_migrationticketfirst1_04">The next migration will arrive in *1 minute*.</page>
+    </entry>
+-->
+    <!-- Needs Gameplay Logic -->
+    <!--
+    <entry id="Dialog_Military_Buildings" >
+      <page speakerId="Council" event="vo_councilwoman_militaryfirst1_01">I see you have discovered your *Military* options.</page>
+      <page speakerId="Council" event="vo_councilwoman_militaryfirst1_02">While the Council does not _condone_ violence, corporations are free to pursue profits by *any means necessary*.</page>
+      <page speakerId="Council" event="vo_councilwoman_militaryfirst1_03">You may be forced to protect your Headquarters. If it is destroyed, the Council will *terminate its contract* with your parent corporation.</page>
+    </entry>
+	-->
+
+    <!-- Not Hooked Up -->
+    <!--
+    <entry id="Dialog_SpaceportAuctionReminder" triggerGameWorldTime="360">
+      <page speakerId="SpaceStation" event="vo_paxeast2019_spaceportop_intro1auctionwin_01">Operator here.</page>
+      <page speakerId="SpaceStation" event="vo_paxeast2019_spaceportop_intro1secondmigrant_02">It uh, looks like we got *another group of ships inbound* with more uh... resources.</page>
+      <page speakerId="SpaceStation" event="vo_paxeast2019_spaceportop_intro2secondmigrant_03">The bidding will start pretty soon and I think we have *better cargo this time*.</page>
+      <page speakerId="SpaceStation" event="vo_paxeast2019_spaceportop_intro1secondmigrant_04">So take a look when you can.</page>
+    </entry>
+
+    <entry id="Dialog_FirstObjectiveReminder" triggerGameWorldTime="360">
+      <page speakerId="Corporation" event="vo_paxeast2019_corpmonitor_objective1_01">Founder, I've noticed that you are poorly equipped to *defend against the local hostiles*.</page>
+      <page speakerId="Corporation" event="vo_paxeast2019_corpmonitor_objective2_02">I suggest *building a defensive turret*.  Once completed, you will be prepared to deal with any hostilities.</page>
+      <page speakerId="Corporation" event="vo_paxeast2019_corpmonitor_objective1_03">To do this, you will require *credits*, *isotopes*, and *power*.</page>
+    </entry>
+
+    <entry id="Dialog_SecondObjectiveReminder" triggerGameWorldTime="500">
+      <page speakerId="Corporation" event="vo_paxeast2019_corpmonitor_reminder1_01">Founder, I'd like to remind you that the Council will not benefit should you be eliminated by another Corporation.</page>
+      <page speakerId="Corporation" event="vo_paxeast2019_corpmonitor_reminder2_02">I recommend *building a turret* to defend against any incoming hostiles.</page>
+    </entry>
+    -->
+
+  </dialog_entries>
+</dialog>
