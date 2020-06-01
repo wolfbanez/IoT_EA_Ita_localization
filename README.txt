@@ -31,3 +31,7 @@ HOW TO INSTALL Localization
 5) Go here: \IndustriesOfTitan\Titan\Content\XML\
 6) Make a backup file of XMLs, if you want
 7) Copy and rename the localized XML files, removing the version info from the filenames
+
+HOW TO BE NOTIFIED OF UPDATES
+
+Go to Settings -> Notifications and enter your email address to receive updates for the localization! (I hope it works!)
