@@ -34,3 +34,4 @@ HOW TO INSTALL Localization
 HOW TO BE NOTIFIED OF UPDATES
 
 Go to Settings -> Notifications and enter your email address to receive updates for the localization! (I hope it works!)
+
