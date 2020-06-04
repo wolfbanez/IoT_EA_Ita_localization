@@ -1,0 +1,242 @@
+﻿<mapLocations>
+	<mapLocation id="Barren">
+		<name>Concessione a basso rischio</name>
+		<loreText>Il classico territorio iniziale del Consiglio per i nuovi investimenti. Tempo spiacevole, rovine fatiscienti e una spesse coltre di nuvole velenose.</loreText>
+		<gameplayText>
+			- Risorse normali. |- Rocce normali. |- Laghi normali. |- Fessure normali. |- Campi Ribelli normali.
+		</gameplayText>
+		<!-- Use default map settings 
+			<resourcePatches_Minerals type="double">20</resourcePatches_Minerals>
+			<resourcePatches_Isotopes type="double">6</resourcePatches_Isotopes>
+			<resourceNodes_Minerals type="int">6</resourceNodes_Minerals>
+			<resourceNodes_Isotopes type="int">4</resourceNodes_Isotopes>
+			<rocks type="double">100</rocks>
+			<lakes type="double">200</lakes>
+			<crevices type="double">40</crevices>
+			<rebelsNum type="int">5</rebelsNum>
+		-->
+	</mapLocation>
+
+	<mapLocation id="Rich">
+		<name>Rischio e Ricompensa elevati</name>
+		<loreText>Le parti più redditizie di Titano sono anche le più pericolose. Solo chi può proteggere i propri interessi può farcela qui, il resto cadrà nelle fessure.</loreText>
+		<gameplayText>
+		   - Tantissime Risorse. |- Pochissime rocce. |- Pochissimi laghi. |- Tantissime fessure. |- Tantissimi Campi Ribelli. 
+		</gameplayText>
+		<settings>
+			<resourcePatches_Minerals type="double">160</resourcePatches_Minerals>
+			<resourcePatches_Isotopes type="double">160</resourcePatches_Isotopes>
+
+			<resourceNodes_Minerals type="int">16</resourceNodes_Minerals>
+			<resourceNodes_Isotopes type="int">16</resourceNodes_Isotopes>
+
+			<minInitialMineralPatches type="int">14</minInitialMineralPatches>
+			<minInitialMineralPatchSize type="int">7</minInitialMineralPatchSize>
+			<maxInitialMineralPatchSize type="int">10</maxInitialMineralPatchSize>
+			<mineralPatchExclusionRadiusMin type="double">7</mineralPatchExclusionRadiusMin>
+
+			<minInitialIsotopePatches type="int">12</minInitialIsotopePatches>
+			<minInitialIsotopePatchSize type="int">6</minInitialIsotopePatchSize>
+			<maxInitialIsotopePatchSize type="int">8</maxInitialIsotopePatchSize>
+			<isotopePatchExclusionRadiusMin type="double">7</isotopePatchExclusionRadiusMin>
+
+			<rocks type="double">20</rocks>
+			<lakes type="double">40</lakes>
+
+			<crevices type="double">200</crevices>
+			<creviceExclusionRadiusMin type="double">1.5</creviceExclusionRadiusMin>
+
+			<rebelsNum type="int">15</rebelsNum>
+		</settings>
+	</mapLocation>
+
+	<mapLocation id="Rocky">
+		<name>Pioniere terraformatore</name>
+		<loreText>Una zona di Titano disabitata e sterile, calma grazie all'abbondanza di montagne rocciose e alle sua bellissime acque tossiche. Perfetto per le compagnie che vogliono aprire la strada.</loreText>
+		<gameplayText>
+			- Poche Risorse. |- Tantissime rocce. |- Tantissimi laghi. |- Pochissime fessure. |- Pochi Campi Ribelli. 
+		</gameplayText>
+		<settings>
+			<resourcePatches_Minerals type="double">10</resourcePatches_Minerals>
+			<resourcePatches_Isotopes type="double">3</resourcePatches_Isotopes>
+
+			<resourceNodes_Minerals type="int">10</resourceNodes_Minerals>
+			<initialMineralsNodeExclusionRadiusMin type="double">5</initialMineralsNodeExclusionRadiusMin>
+			<initialMineralsNodeExclusionRadiusMax type="double">6</initialMineralsNodeExclusionRadiusMax>
+
+			<resourceNodes_Isotopes type="int">10</resourceNodes_Isotopes>
+			<initialIsotopesNodeExclusionRadiusMin type="double">5</initialIsotopesNodeExclusionRadiusMin>
+			<initialIsotopesNodeExclusionRadiusMax type="double">6</initialIsotopesNodeExclusionRadiusMax>
+
+			<nodesExclusionRadiusMin type="double">8</nodesExclusionRadiusMin>
+
+			<rocks type="double">800</rocks>
+			<rockExclusionRadiusMin type="double">1.5</rockExclusionRadiusMin>
+
+			<lakes type="double">800</lakes>
+			<lakeExclusionRadiusMin type="double">1.5</lakeExclusionRadiusMin>
+
+			<crevices type="double">10</crevices>
+
+			<rebelsNum type="int">3</rebelsNum>
+		</settings>
+	</mapLocation>
+
+<!--
+	<mapLocation id="Testing">
+		<name>(DEBUG) Predefined Location</name>
+		<loreText>Debug, don't use </loreText>
+		<gameplayText></gameplayText>
+		 The values I have filled in here are the defaults that are in Ryan's code, to give you a starting value
+		<settings>
+			 public variables 
+			<lakes type="double">30</lakes>
+			<mountains type="double">10</mountains>
+			<cracks type="double">10</cracks>
+			<crevices type="double">5</crevices>
+			<resourcePatches_Minerals type="double">10</resourcePatches_Minerals>
+			<resourcePatches_Isotopes type="double">5</resourcePatches_Isotopes>
+			<monumentRuins type="double">2</monumentRuins>
+			<anomalies type="double">10</anomalies>
+			<rocks type="double">10</rocks>
+			<sinkHoles type="double">10</sinkHoles>
+			<ruins type="double">100</ruins>
+			<emptySpace type="double">25</emptySpace>
+
+			<rebelsNum type="int">5</rebelsNum>
+			<resourceNodes_Minerals type="int">4</resourceNodes_Minerals>
+			<resourceNodes_Isotopes type="int">2</resourceNodes_Isotopes>
+
+
+			 custom hidden variables 
+
+			 How far from the start location, at minimum, must the rebel HQs be placed? 
+			<rebelExclusionRadiusMin type="double">15</rebelExclusionRadiusMin>
+			
+			 How far from the start location, at maximum, must the rebel HQs be placed? 
+			<rebelExclusionRadiusMax type="double">21</rebelExclusionRadiusMax>
+			
+			 As a fraction of map (width+height)/2, how far, at minimum, must rebel HQs be from each other? 
+			<rebelMinDistPercentage type="double">0.4</rebelMinDistPercentage>
+
+			
+			 How far from the start location, at minimum, must the council building be placed? 
+			<councilExclusionRadiusMin type="double">4</councilExclusionRadiusMin>
+			
+			 How far from the start location, at maximum, must the council building be placed? 
+			<councilExclusionRadiusMax type="double">4.5</councilExclusionRadiusMax>
+			
+			 How far from the start location, at minimum, must the spaceport building be placed? 
+			<spaceportExclusionRadiusMin type="double">6</spaceportExclusionRadiusMin>
+			
+			 How far from the start location, at maximum, must the spaceport building be placed? 
+			<spaceportExclusionRadiusMax type="double">6.5</spaceportExclusionRadiusMax>
+			
+			 How far apart must the HQ and spaceport be, at minimum? 
+			<councilAndSpacePortMinDist type="double">4</councilAndSpacePortMinDist>
+
+			 How far from the start location, at minimum, must the "initial" mineral node be? 
+			<initialMineralsNodeExclusionRadiusMin type="double">7</initialMineralsNodeExclusionRadiusMin>
+			
+			 How far from the start location, at maximum, must the "initial" mineral node be? 
+			<initialMineralsNodeExclusionRadiusMax type="double">8</initialMineralsNodeExclusionRadiusMax>
+			
+			 How far from the start location, at minimum, must the "initial" isotope node be? 
+			<initialIsotopesNodeExclusionRadiusMin type="double">7</initialIsotopesNodeExclusionRadiusMin>
+			
+			 How far from the start location, at maximum, must the "initial" isotope node be? 
+			<initialIsotopesNodeExclusionRadiusMax type="double">8</initialIsotopesNodeExclusionRadiusMax>
+			
+			 How far, at minimum, must the two "initial" resource nodes be from each other?  (ie. How close is the starting mineral node allowed to be to the starting isotope node?) 
+			<minDistanceBetweenInitialNodes type="double">8</minDistanceBetweenInitialNodes>
+			
+			 How far from the start location, at minimum, must all additional resource nodes be placed? 
+			<nodesExclusionRadiusMin type="double">15</nodesExclusionRadiusMin>
+			
+			 As a fraction of map (width+height)/2, how far from the start location, at maximum, must all additional resource nodes be placed? 
+			<nodesExclusionRadiusMaxPercentage type="double">0.35</nodesExclusionRadiusMaxPercentage>
+			
+			 As a fraction of map (width+height)/2, how far must resource nodes of the same type be from each other?  (ie. How far should a mineral node be, at minimum, from all other mineral nodes?) 
+			<sameResourceMinDistPercentage type="double">0.2</sameResourceMinDistPercentage>
+			
+			 As a fraction of map (width+height)/2, how far must resource nodes of different types be from each other?  (ie. How far should a mineral node be, at minumum, from all other isotope nodes?  And vice versa.) 
+			<differentResourceMinDistPercentage type="double">0.1</differentResourceMinDistPercentage>
+
+			 Lakes are placed one tile at a time, in a random walk.  What is the smallest that a lake can be, in number of tiles? 
+			<minLakeSize type="int">4</minLakeSize>
+			
+			 What is the largest that a lake can be, in number of tiles? 
+			<maxLakeSize type="int">20</maxLakeSize>
+			
+			 How far from the start location, at minimum, must all lakes be? 
+			<lakeExclusionRadiusMin type="double">3</lakeExclusionRadiusMin>
+
+			 Crevices are placed one tile at a time, in a random walk.  What is the smallest that a crevice can be, in number of tiles? 
+			<minCreviceSize type="int">2</minCreviceSize>
+			
+			 What is the largest that a crevice can be, in number of tiles? 
+			<maxCreviceSize type="int">6</maxCreviceSize>
+			
+			 How far from the start location, at minimum, must all crevices be? 
+			<creviceExclusionRadiusMin type="double">4</creviceExclusionRadiusMin>
+
+			 Rock clusters are placed one tile at a time, in a random walk.  What is the smallest that a rock cluster can be, in number of tiles? 
+			<minRockSize type="int">1</minRockSize>
+			
+			 What is the largest that a rock cluster can be, in number of tiles? 
+			<maxRockSize type="int">13</maxRockSize>
+			
+			 How far from the start location, at minimum, must all rocks be? 
+			<rockExclusionRadiusMin type="double">6</rockExclusionRadiusMin>
+
+			 Close to the start location, how many minerals should we place, at minimum?  Note that this is not a guaranteed amount, but rather PATCHES (of the sizes specified below) will be placed until we've placed at least this many. 
+			<minInitialMineralPatches type="int">7</minInitialMineralPatches>
+			
+			 Resource patches are placed one tile at a time, in a random walk.  What is the smallest that an initial mineral patch can be, in number of tiles? 
+			<minInitialMineralPatchSize type="int">5</minInitialMineralPatchSize>
+			
+			 What is the largest that an initial mineral patch can be, in number of tiles? 
+			<maxInitialMineralPatchSize type="int">5</maxInitialMineralPatchSize>
+			
+			 How far from the start location, at minimum, must the initial mineral patches be? 
+			<initialMineralPatchExclusionRadiusMin type="double">3</initialMineralPatchExclusionRadiusMin>
+			
+			 How far from the start location, at maximum, must the initial mineral patches be? 
+			<initialMineralPatchExclusionRadiusMax type="double">5</initialMineralPatchExclusionRadiusMax>
+			
+			 What is the smallest that a non-initial mineral patch can be, in number of tiles? 
+			<minMineralPatchSize type="int">2</minMineralPatchSize>
+			
+			 What is the largest that a non-initial mineral patch can be, in number of tiles? 
+			<maxMineralPatchSize type="int">5</maxMineralPatchSize>
+			
+			 How far from the start location, at minimum, must the non-initial mineral patches be? 
+			<mineralPatchExclusionRadiusMin type="double">10</mineralPatchExclusionRadiusMin>
+			
+			 Close to the start location, how many isotopes should we place, at minimum?  Note that this is not a guaranteed amount, but rather PATCHES (of the sizes specified below) will be placed until we've placed at least this many. 
+			<minInitialIsotopePatches type="int">6</minInitialIsotopePatches>
+			
+			 Resource patches are placed one tile at a time, in a random walk.  What is the smallest that an initial isotope patch can be, in number of tiles? 
+			<minInitialIsotopePatchSize type="int">4</minInitialIsotopePatchSize>
+			
+			 What is the largest that an initial isotope patch can be, in number of tiles? 
+			<maxInitialIsotopePatchSize type="int">4</maxInitialIsotopePatchSize>
+			
+			 How far from the start location, at minimum, must the initial isotope patches be 
+			<initialIsotopePatchExclusionRadiusMin type="double">4</initialIsotopePatchExclusionRadiusMin>
+			
+			 How far from the start location, at maximum, must the initial isotope patches be 
+			<initialIsotopePatchExclusionRadiusMax type="double">6</initialIsotopePatchExclusionRadiusMax>
+			
+			 What is the smallest that a non-initial isotope patch can be, in number of tiles? 
+			<minIsotopePatchSize type="int">2</minIsotopePatchSize>
+			
+			 What is the largest that a non-initial isotope patch can be, in number of tiles? 
+			<maxIsotopePatchSize type="int">5</maxIsotopePatchSize>
+			
+			 How far from the start location, at minimum, must the non-initial isotope patches be? 
+			<isotopePatchExclusionRadiusMin type="double">10</isotopePatchExclusionRadiusMin>
+		</settings>
+	</mapLocation>
+-->
+</mapLocations>

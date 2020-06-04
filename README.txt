@@ -8,7 +8,6 @@ Right now we identified:
 \IndustriesOfTitan\Titan\Content\TextData\GameStringTable.txt
 Contains most of the game text.
 
-
 \IndustriesOfTitan\Titan\Content\XML\gameModes.xml
 \IndustriesOfTitan\Titan\Content\XML\mapLocations.xml
 \IndustriesOfTitan\Titan\Content\XML\factions.xml
@@ -20,7 +19,7 @@ Our goal is to provide most, if not all the translatable text in the game.
 
 Localized files will have a version file to identify what version of the game was used to translate them, in case the files are changed with the game updating.
 
-WARNING: some XML files aren't localized at the moment, they will be uploaded shortly
+CURRENT LOCALIZED VERSION: 0.1.14
 
 HOW TO INSTALL Localization
 
@@ -31,3 +30,7 @@ HOW TO INSTALL Localization
 5) Go here: \IndustriesOfTitan\Titan\Content\XML\
 6) Make a backup file of XMLs, if you want
 7) Copy and rename the localized XML files, removing the version info from the filenames
+
+HOW TO BE NOTIFIED OF UPDATES
+
+Go to Settings -> Notifications and enter your email address to receive updates for the localization! (I hope it works!)

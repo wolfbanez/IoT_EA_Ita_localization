@@ -1,0 +1,17 @@
+﻿<factions>
+	<faction id="landfallers">
+		<name>Approdatori</name>
+		<gameplayText>- 1 Quartier generale |- 5 Impiegati |- 5 Minerali, 0 Isotopi, 100 Crediti |- 20 Influenza |- Territorio 3x3</gameplayText>
+			<loreText>_Mentra la "*corsa all'oro*" di Titano prendeva piede, molte startup e corporazione dalla *Terra*, *Marte* e dalla *cintura d'asteroidi* si sono affrettate per ottenere un appezzamento pieno di rovine dove iniziare i propri affari. | |La fazione degli *Approdatori* è questo caotico gruppo di speranzosi provenienti da tutto il Sistema solare. Sono persone che sognano in grande e probabilmente hanno già assaggiato il fallimento. Condividono inoltre una *cultura iper-capitalista*. Gli *Approdatori* sono motivati dalla loro posizione in bilico e dai possibili incredibili guadagni in caso di successo. | |Ogni tanto, una di queste impresa ha incredibilmente successo. Alcuni sono già sulla strada di diventare delle vere e proprie Fazioni su Titano. | |*Riuscirai a essere uno di quelli a capo del dominio del Sistema?*_</loreText>
+		<video>FileMediaSource'/Game/UI/MainMenu/FactionSelect_Default_V.FactionSelect_Default_V'</video>
+		<!-- TODO: Define gameplay perks -->
+	</faction>
+	<faction id="utopians" locked="true">
+		<name>\[redacted\]</name>
+		<loreText>_\[redacted\]_\\[redacted/]CORPORATION[redacted/]\\1-5.3p2 |_\[redacted\]_.48-6.A3\\0.7g9 |_\[redacted\]_5-9.q44\\_SCONOSCIUTO_: |_\[redacted\]__SR_07;3-2,2 | |_\[redacted\]__dd-37_... |_\[redacted\]__.ret_; | |_\[redacted\]\\... |_..._ |_..._ |_..._</loreText>
+		<gameplayText>_\[redacted\]_7h-0;6\\[redacted/]_arrivo_\\-5.5 |_\[redacted\]_i;1.3-_early_:7.g1; |_\[redacted\]_\\_access_:... |_..._ |_..._</gameplayText>
+		<video>FileMediaSource'/Game/UI/MainMenu/FactionSelect_Locked_V.FactionSelect_Locked_V'</video>
+		<!-- TODO: Define gameplay perks -->
+	</faction>
+</factions>
+
