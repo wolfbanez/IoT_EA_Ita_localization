@@ -1,0 +1,646 @@
+﻿<!--
+showSalvageTutorialTimeCutoff, time before we show the player a reminder
+to salvage a ruin. Time is in seconds, so 7 minutes = 7*60 = 420
+	 -->
+<ui
+  dialogNextPageDelay=".75"
+  dialogFirstPageStartAudioDelay=".5"
+  dialogSubsequentPageStartAudioDelay="0"
+
+  deathNotifMaxNumber="5"
+  deathNotifMinTime="0.5"
+  deathNotifMaxTime="3.0"
+
+  delayBeforeShowingWinScreen="3.0"
+  delayBeforeShowingLoseScreen="3.0"
+
+  doFullNewGameSequence="true"
+  burrowBaseCost="0:0"
+  burrowPerBuildingCost="0:100"
+
+  fromDevVideoUrl="https://www.youtube.com/watch?v=O8rlPOh9b9Q"
+  patchNotesUrl="https://forums.braceyourselfgames.com/c/industries-of-titan/announcements-and-patch-notes"
+  knownIssuesUrl="https://forums.braceyourselfgames.com/forum/industries-of-titan/bugs-amp-known-issues/2125-known-issues-last-updated-4-27-2020"
+
+  customBuildingNameMaxCharacters="16"
+  customFloorNameMaxCharacters="16"
+  customWorkerNameMaxCharacters="16"
+  >
+  <titan_tuesday_dates>
+	  <!-- Sun, 21 Oct 2018 12:16:24 GMT -->
+	  <!-- MUST BE GMT -->
+	  <!--- delete this next line when we want to hide the "live" banner -->
+	  <date showLive="true">Tue, 9 Jun 2020 00:00:00 GMT</date>
+	  <date>Tue, 7 Jul 2020 21:00:00 GMT</date>
+  </titan_tuesday_dates>
+  <default_job_category_order>
+	  <category>RepairMilitary</category>
+	  <category>RepairNonMilitary</category>
+	  <category>ConstructDevice</category>
+	  <category>ConstructBuilding</category>
+	  <category>UpgradeBuilding</category>
+	  <category>ConnectBuilding</category>
+    <category>MoveMinerals</category>
+	  <category>MoveIsotopes</category>
+	  <category>RuinSurvey</category>
+	  <category>RuinSalvage</category>
+	  <category>RuinExtract</category>
+	  <category>DismantleDevice</category>
+	  <category>DismantleBuilding</category>
+	  <category>EmptyMine</category>
+	  <category>MoveWaste</category>
+	  <category>BurnWaste</category>
+  </default_job_category_order>
+  <simple_job_categories>
+	  <group id="Repair">
+		  <category>RepairMilitary</category>
+		  <category>RepairNonMilitary</category>
+	  </group>
+	  <group id="Construct">
+		  <category>ConstructDevice</category>
+		  <category>ConstructBuilding</category>
+		  <category>UpgradeBuilding</category>
+		  <category>ConnectBuilding</category>
+	  </group>
+	  <group id="MoveResources">
+      <category>MoveMinerals</category>
+		  <category>MoveIsotopes</category>
+		  <category>EmptyMine</category>
+	  </group>
+	  <group id="RuinSurvey">
+		  <category>RuinSurvey</category>
+	  </group>
+	  <group id="RuinSalvage">
+		  <category>RuinSalvage</category>
+	  </group>
+	  <group id="RuinExtract">
+		  <category>RuinExtract</category>
+	  </group>
+	  <group id="Cleanup">
+		  <category>MoveWaste</category>
+		  <category>BurnWaste</category>
+	  </group>
+	  <group id="Dismantle">
+		  <category>DismantleDevice</category>
+		  <category>DismantleBuilding</category>
+	  </group>
+  </simple_job_categories>
+  <speeds>
+    <speed multiplier="1" />
+    <speed multiplier="2" />
+    <speed multiplier="3" />
+  </speeds>
+  <city>
+    <!-- When adding a new category, check that the icon exists in
+       UI/Textures/BuildingCategories
+       The format is:
+       T_UI_BuildingCategory_[name]
+       -->
+    <category name="production">
+      <building name="TILETYPE_FACTORY" />
+      <building name="TILETYPE_MINE" />
+      <building name="TILETYPE_SMOKESTACK" />
+      <building name="TILETYPE_STORAGE_FACILITY" />
+      <building name="Separator" />
+      <building name="TILETYPE_ROAD" />
+      <building name="TILETYPE_TRANSPORT_HUB" />
+    </category>
+    <category name="power">
+      <building name="TILETYPE_POWERPLANT" />
+      <building name="TILETYPE_BATTERY_CENTER" />
+      <building name="TILETYPE_PYLON" />
+      <building name="Separator" />
+      <building name="TILETYPE_FUEL_GENERATOR" />
+      <building name="TILETYPE_FUEL_CENTER" />
+    </category>
+    <category name="people">
+      <building name="TILETYPE_RESIDENTIAL" />
+      <building name="TILETYPE_OFFICE" />
+      <building name="TILETYPE_SCHOOL" />
+    </category>
+    <category name="command">
+      <building name="TILETYPE_FLAK_CANNON" />
+      <building name="Separator" />
+      <building name="TILETYPE_COMMAND_CENTER" />
+    </category>
+    <category name="council">
+      <building name="TILETYPE_MONUMENT" />
+    </category>
+  </city>
+
+  <building_interior>
+    <hq_regular_floors>
+      <devices>
+        <category name="population">
+          <device name="DEVICE_HABITAT_POD" />
+          <device name="DEVICE_WORKSTATION" />
+          <device name="DEVICE_TRAININGSTATION" />
+        </category>
+        <category name="power">
+          <device name="DEVICE_GENERATOR_MINI" />
+          <device name="DEVICE_GENERATOR" />
+          <device name="DEVICE_GENERATOR_HEAVY" />
+          <device name="DEVICE_POWERRELAY" />
+          <device name="DEVICE_POWERRELAY_LARGE" />
+          <device name="DEVICE_BATTERY_SMALL" />
+          <device name="DEVICE_BATTERY_MEDIUM" />
+          <device name="DEVICE_CONDUIT" />
+        </category>
+        <category name="fuel">
+          <device name="DEVICE_FUEL_FABRICATOR_SMALL" />
+          <device name="DEVICE_FUEL_FABRICATOR_LARGE" />          
+          <device name="DEVICE_MINI_FUEL_TANK" />
+          <device name="DEVICE_FUEL_TANK" />
+        </category>
+        <category name="logistics">
+          <device name="DEVICE_STORAGE_SMALL" />
+          <device name="DEVICE_STORAGE_MEDIUM" />
+          <device name="DEVICE_STORAGE_LARGE" />
+          <device name="DEVICE_STORAGE_WASTE" />
+          <device name="DEVICE_CONVEYOR" locked="true" />
+        </category>
+        <category name="resources">
+          <device name="DEVICE_REFINER" locked="true" />
+          <device name="DEVICE_CENTRIFUGE" locked="true" />
+          <device name="DEVICE_PURIFIER" locked="true" />
+        </category>
+      </devices>
+    </hq_regular_floors>
+    <factory_regular_floors>
+      <devices>
+        <category name="population">
+          <device name="DEVICE_HABITAT_POD" />
+          <device name="DEVICE_WORKSTATION" />
+          <device name="DEVICE_TRAININGSTATION" />
+        </category>
+        <category name="power">
+          <device name="DEVICE_GENERATOR_MINI" />
+          <device name="DEVICE_GENERATOR" />
+          <device name="DEVICE_GENERATOR_HEAVY" />
+          <device name="DEVICE_POWERRELAY" />
+          <device name="DEVICE_POWERRELAY_LARGE" />
+          <device name="DEVICE_BATTERY_SMALL" />
+          <device name="DEVICE_BATTERY_MEDIUM" />
+          <device name="DEVICE_CONDUIT" />
+        </category>
+        <category name="fuel">
+          <device name="DEVICE_FUEL_FABRICATOR_SMALL" />
+          <device name="DEVICE_FUEL_FABRICATOR_LARGE" />          
+          <device name="DEVICE_MINI_FUEL_TANK" />
+          <device name="DEVICE_FUEL_TANK" />
+        </category>
+        <category name="logistics">
+          <device name="DEVICE_STORAGE_SMALL" />
+          <device name="DEVICE_STORAGE_MEDIUM" />
+          <device name="DEVICE_STORAGE_LARGE" />
+          <device name="DEVICE_STORAGE_WASTE" />
+          <device name="DEVICE_CONVEYOR" locked="true" />
+        </category>
+        <category name="resources">
+          <device name="DEVICE_REFINER" locked="true" />
+          <device name="DEVICE_CENTRIFUGE" locked="true" />
+          <device name="DEVICE_PURIFIER" locked="true" />
+        </category>
+      </devices>
+    </factory_regular_floors>
+    <roof>
+      <devices>
+        <category name="workers">
+          <device name="DEVICE_MED_POD" locked="true" />
+        </category>
+        <category name="power">
+          <device name="DEVICE_GENERATOR_HEAVY" />
+          <device name="DEVICE_MINI_FUEL_TANK" />
+          <device name="DEVICE_FUEL_TANK" />
+          <device name="DEVICE_CONDUIT" />
+          <device name="DEVICE_BATTERY_SMALL" />
+          <device name="DEVICE_BATTERY_MEDIUM" />
+        </category>
+        <category name="offense">
+          <device name="DEVICE_LASER_SINGLE_SMALL" locked="true" />
+          <device name="DEVICE_LASER_SINGLE_MEDIUM" locked="true" />
+        </category>
+        <category name="defense">
+          <device name="DEVICE_HARD_SHIELD" locked="true" />
+          <device name="DEVICE_HARD_SHIELD_AUTO" locked="true" />
+        </category>
+        <!-- 
+          <category name="sensors">
+            <device name="DEVICE_RADAR_SMALL" locked="true" />
+            <device name="DEVICE_RADAR" locked="true" />
+            <device name="DEVICE_RADAR_LARGE" locked="true" />
+            <device name="DEVICE_ACOUSTIC_SCANNER" locked="true" />
+            <device name="DEVICE_JAMMER" locked="true" />
+          </category>
+          -->
+      </devices>
+    </roof>
+    <ship>
+      <hulls>
+        <category name="Level1">
+          <hull id="0" />
+          <hull id="1" />
+          <hull id="2" />
+          <hull id="3" />
+          <hull id="4" />
+        </category>
+        <category name="Level2">
+          <hull id="5" />
+          <hull id="6" />
+          <hull id="7" />
+          <hull id="8" />
+          <hull id="9" />
+        </category>
+        <category name="Level3">
+          <hull id="10" />
+          <hull id="11" />
+          <hull id="12" />
+          <hull id="13" />
+          <hull id="14" />
+        </category>
+      </hulls>
+      <devices>
+        <category name="workers">
+          <device name="DEVICE_ESCAPE_POD" />
+          <device name="DEVICE_LIFESUPPORT" />
+          <device name="DEVICE_MED_POD" />
+        </category>
+        <category name="fuel">
+          <!--<device name="DEVICE_COCKPIT" />-->
+          <device name="DEVICE_ENGINE_SMALL" />
+          <device name="DEVICE_MINI_FUEL_TANK" />
+          <device name="DEVICE_FUEL_TANK" />
+        </category>
+        <category name="power">
+          <device name="DEVICE_GENERATOR" />
+          <device name="DEVICE_BATTERY_SMALL" />
+          <device name="DEVICE_BATTERY_MEDIUM"/>
+        </category>
+        <category name="defense">
+          <device name="DEVICE_HARD_SHIELD" />
+          <device name="DEVICE_HARD_SHIELD_AUTO" />
+          <device name="DEVICE_REINFORCEMENT_PILLAR" />
+        </category>
+        <category name="offense">
+          <device name="DEVICE_LASER_SINGLE_SMALL" />
+          <device name="DEVICE_LASER_SINGLE_MEDIUM" />
+        </category>
+      </devices>
+    </ship>
+  </building_interior>
+  <council 
+	  ticketRefreshTime="20"
+	  maxTickets="5"
+	  startingTickets="5"
+	  >
+    <gain>
+      <choice name="SellMinerals" cost="4" amount="10" />
+      <choice name="SellIsotopes" cost="4" amount="2" />
+      <choice name="SellCredits" cost="4" amount="100" />
+      <choice name="SellRedTech" cost="20" amount="1" />
+    </gain>
+    <spend>
+      <choice name="BuyMinerals" cost="-10" amount="5" />
+      <choice name="BuyIsotopes" cost="-10" amount="1" />
+      <choice name="BuyCredits" cost="-10" amount="50" />
+    </spend>
+  </council>
+  <keybindings>
+    <!--<binding actionName="CameraMouseDragMove" />
+<binding actionName="CameraMouseOrbit" />
+<binding actionName="CameraMouseRotate" />
+<binding actionName="Cancel" />
+<binding actionName="CityEditorView" />
+<binding actionName="CityEditorView" />
+<binding actionName="CityGeneratedView" />
+<binding actionName="CityGeneratedView" />
+<binding actionName="CityView" />
+<binding actionName="CityView" />
+<binding actionName="CombatView" />
+<binding actionName="CombatView" />
+<binding actionName="Copy" />
+<binding actionName="CopyLayoutToClipboard" />
+<binding actionName="CycleBlueprintDown" />
+<binding actionName="CycleBlueprintUp" />
+<binding actionName="CycleLayoutLeft" />
+<binding actionName="CycleLayoutLeftP2" />
+<binding actionName="CycleLayoutRight" />
+<binding actionName="CycleLayoutRightP2" />
+<binding actionName="DestroySelectedLock" />
+<binding actionName="EditorView" />
+<binding actionName="EditorView" />
+<binding actionName="LeftMouseClick" />
+<binding actionName="PitchDown" />
+<binding actionName="PitchUp" /> -->
+
+    <category id="global">
+      <binding actionName="ToggleTechWindow" />
+      <binding actionName="ToggleCouncilWindow" />
+      <binding actionName="TogglePopulationWindow" />
+      <binding actionName="ToggleWorkerWindow" />
+      <binding actionName="ToggleMigrantWindow" />
+      <binding actionName="ToggleBugReporter" />
+
+	  <binding actionName="Commit" />
+	  <binding actionName="Cancel" />
+
+      <binding actionName="DismantleSelected" />
+      <binding actionName="DuplicateSelected" />
+      <binding actionName="ToggleEnableSelected" />
+      <binding actionName="TogglePrioritizeJob" />
+
+      <binding actionName="RotateObjectToPlaceCW" />
+
+      <binding actionName="Repair" />
+     <!-- <binding actionName="TogglePower" /> -->
+
+      <binding actionName="QuickSave" />
+
+      <binding actionName="ShowPauseMenu" />
+
+      <binding actionName="ToggleCityBurrow" />
+
+      <binding actionName="EnterSelectedBuildingOrShip" />
+      <binding actionName="PopView" />
+    </category>
+
+    <category id="speed">
+      <binding actionName="IncreaseGameTimeSpeed" />
+      <binding actionName="DecreaseGameTimeSpeed" />
+      <binding actionName="ResetGameTimeSpeed" />
+      <binding actionName="TogglePause" />
+      <binding actionName="SetSpeed1x" />
+      <binding actionName="SetSpeed2x" />
+      <binding actionName="SetSpeed3x" />
+    </category>
+
+    <category id="cameracontrols">
+      <binding actionName="PanDown" />
+      <binding actionName="PanLeft" />
+      <binding actionName="PanRight" />
+      <binding actionName="PanUp" />
+      <binding actionName="RotateCameraCW" />
+      <binding actionName="RotateCameraCCW" />
+      <binding actionName="BoostKeyboardPanSpeed" />
+      <binding actionName="CenterCameraHome" />
+    </category>
+
+    <category id="city_building">
+      <binding actionName="PlaceTileFACTORY" building="TILETYPE_FACTORY" />
+      <binding actionName="PlaceTileMINE" building="TILETYPE_MINE" />
+      <binding actionName="PlaceTileSMOKESTACK" building="TILETYPE_SMOKESTACK" />
+      <binding actionName="PlaceTileSTORAGE_FACILITY" building="TILETYPE_STORAGE_FACILITY" />
+      <binding actionName="PlaceTilePOWERPLANT" building="TILETYPE_POWERPLANT" />
+      <binding actionName="PlaceTileBATTERY_CENTER" building="TILETYPE_BATTERY_CENTER" />
+      <binding actionName="PlaceTilePYLON" building="TILETYPE_PYLON" />
+      <binding actionName="PlaceTileFUEL_GENERATOR" building="TILETYPE_FUEL_GENERATOR" />
+      <binding actionName="PlaceTileFUEL_CENTER" building="TILETYPE_FUEL_CENTER" />
+      <binding actionName="PlaceTileRESIDENTIAL" building="TILETYPE_RESIDENTIAL" />
+      <binding actionName="PlaceTileOFFICE" building="TILETYPE_OFFICE" />
+      <binding actionName="PlaceTileSCHOOL" building="TILETYPE_SCHOOL" />
+      <binding actionName="PlaceTileFLAK_CANNON" building="TILETYPE_FLAK_CANNON" />
+      <binding actionName="PlaceTileCOMMAND_CENTER" building="TILETYPE_COMMAND_CENTER" />
+      <binding actionName="PlaceTileMONUMENT" building="TILETYPE_MONUMENT" />
+    </category>
+
+    <category id="city_tileaction">
+      <binding actionName="Survey" />
+      <binding actionName="Claim" />
+      <binding actionName="Study" />
+      <binding actionName="Salvage" />
+      <binding actionName="Upgrade" />
+      <binding actionName="Connect" />
+    </category>
+
+    <category id="interior_device">
+      <binding actionName="PlaceDeviceHABITAT_POD" device="DEVICE_HABITAT_POD" />
+      <binding actionName="PlaceDeviceWORKSTATION" device="DEVICE_WORKSTATION" />
+      <binding actionName="PlaceDeviceTRAININGSTATION" device="DEVICE_TRAININGSTATION" />
+      <binding actionName="PlaceDeviceGENERATOR_MINI" device="DEVICE_GENERATOR_MINI" />
+      <binding actionName="PlaceDeviceGENERATOR" device="DEVICE_GENERATOR" />
+      <binding actionName="PlaceDeviceGENERATOR_HEAVY" device="DEVICE_GENERATOR_HEAVY" />
+      <binding actionName="PlaceDevicePOWERRELAY" device="DEVICE_POWERRELAY" />
+      <binding actionName="PlaceDevicePOWERRELAY_LARGE" device="DEVICE_POWERRELAY_LARGE" />
+      <binding actionName="PlaceDeviceBATTERY_SMALL" device="DEVICE_BATTERY_SMALL" />
+      <binding actionName="PlaceDeviceBATTERY_MEDIUM" device="DEVICE_BATTERY_MEDIUM" />
+      <binding actionName="PlaceDeviceCONDUIT" device="DEVICE_CONDUIT" />
+      <binding actionName="PlaceDeviceMINI_FUEL_TANK" device="DEVICE_MINI_FUEL_TANK" />
+      <binding actionName="PlaceDeviceFUEL_TANK" device="DEVICE_FUEL_TANK" />
+      <binding actionName="PlaceDeviceSTORAGE_SMALL" device="DEVICE_STORAGE_SMALL" />
+      <binding actionName="PlaceDeviceSTORAGE_MEDIUM" device="DEVICE_STORAGE_MEDIUM" />
+      <binding actionName="PlaceDeviceSTORAGE_LARGE" device="DEVICE_STORAGE_LARGE" />
+    </category>
+
+    <!--
+<binding actionName="RestartGame" />
+<binding actionName="RightMouseClick" />
+<binding actionName="RumbleView" />
+<binding actionName="RumbleView" />
+<binding actionName="SaveLevel" />
+<binding actionName="Select" />
+<binding actionName="SelectShift" />
+<binding actionName="TestAction" />
+<binding actionName="ToggleCameraRotationMode" />
+<binding actionName="ToggleCityCameraVersion" />
+<binding actionName="ToggleDeviceEnabledStatus" />
+<binding actionName="ToggleDOF" />
+<binding actionName="ToggleEdgePanningEnabled" />
+<binding actionName="ToggleFPS" />
+<binding actionName="ToggleInGameUI" />
+<binding actionName="TogglePerformanceSettings" />
+<binding actionName="ToggleRain" />
+<binding actionName="ToggleSandStorm" />
+<binding actionName="ToggleSnow" />
+<binding actionName="UIPopMenu" />
+<binding actionName="UIPopMouseState" />
+-->
+    <category id="overlays">
+      <binding actionName="SetNoOverlay" />
+      <binding actionName="SetPlayerTerritoryOverlay" />
+      <binding actionName="SetPollutionOverlay" />
+      <binding actionName="SetPowerOverlay" />
+      <binding actionName="SetTransportOverlay" />
+    </category>
+
+    <!--
+    <category id="combat">
+      <binding actionName="SelectWeapon1" />
+      <binding actionName="SelectWeapon2" />
+      <binding actionName="SelectWeapon3" />
+      <binding actionName="SelectWeapon4" />
+      <binding actionName="SelectWeapon5" />
+      <binding actionName="SelectWeapon6" />
+    </category>
+-->
+
+    <!--
+<binding actionName="DestroyOrCancelJob" />
+<binding actionName="PauseJob" />
+<binding actionName="ResumeJob" />
+<binding actionName="DemoTogglePressMode" />
+<binding actionName="DemoIncreaseTimer" />
+<binding actionName="DemoDecreaseTimer" />
+<binding actionName="PopView" />
+<binding actionName="FleeCombat" />
+<binding actionName="SelectWeapon1" />
+<binding actionName="FleeCombat" />
+<binding actionName="CancelCombat" />
+<binding actionName="CancelCombat" />
+<binding actionName="LoadGameDevOnly" />
+<binding actionName="SkipIntroVideo" />
+<binding actionName="SkipIntroVideo" />
+<binding actionName="SkipIntroVideo" />
+<binding actionName="ContinueObjectPlacementOnCommit" />
+<binding actionName="ContinueObjectPlacementOnCommit" />
+
+
++AxisMappings=(AxisName="AnyInputMouseMovement",Scale=1.000000,Key=MouseX)
++AxisMappings=(AxisName="AnyInputMouseMovement",Scale=1.000000,Key=MouseY)
++AxisMappings=(AxisName="MoveForward",Scale=1.000000,Key=S)
++AxisMappings=(AxisName="MoveForward",Scale=-1.000000,Key=W)
++AxisMappings=(AxisName="MoveRight",Scale=1.000000,Key=A)
++AxisMappings=(AxisName="MoveRight",Scale=-1.000000,Key=D)
++AxisMappings=(AxisName="Zoom",Scale=1.000000,Key=MouseWheelAxis)
++AxisMappings=(AxisName="ZoomIn",Scale=1.000000,Key=MouseWheelAxis)
+-->
+
+  </keybindings>
+
+  <corporations>
+    <names_part1>
+      <name>Acen</name>
+      <name>Iolia</name>
+      <name>Zhera</name>
+      <name>Shylea</name>
+      <name>Paxen</name>
+      <name>Olenko</name>
+      <name>Greenheart</name>
+      <name>Croxil</name>
+      <name>ProGen</name>
+      <name>MetaMarch</name>
+      <name>Ironside</name>
+      <name>Plato</name>
+      <name>Ceres</name>
+      <name>Lunaborn</name>
+      <name>Ceta</name>
+      <name>Pallas</name>
+      <name>Vesta</name>
+      <name>Hygiean</name>
+      <name>Eunomia</name>
+      <name>Apophis</name>
+      <name>Ganymode</name>
+      <name>Meris</name>
+      <name>Gryphia</name>
+      <name>Schorrian</name>
+      <name>Itokawa</name>
+      <name>Neumasa</name>
+      <name>Hektor</name>
+      <name>Rosso</name>
+      <name>Ita</name>
+      <name>Eumosis</name>
+      <name>Prosis</name>
+      <name>Cruellon</name>
+      <name>Xatchi</name>
+      <name>Solaris</name>
+      <name>Citadus</name>
+      <name>Gyennu</name>
+      <name>Nyda</name>
+      <name>Larck</name>
+      <name>Nayr</name>
+      <name>Knic</name>
+      <name>Ngun</name>
+      <name>EonTani</name>
+      <name>Del Vie Ren</name>
+      <name>Enb</name>
+      <name>Serhymphu</name>
+      <name>Remeyj</name>
+      <name>Pliplish</name>
+      <name>Gintusa</name>
+      <name>Gredel</name>
+      <name>Nydna</name>
+      <name>Skanwa Roby</name>
+      <name>Velap</name>
+      <name>Vifmoe</name>
+      <name>Monarl</name>
+      <name>Weebi</name>
+      <name>Xalea</name>
+      <name>Shessic</name>
+      <name>Rhaba</name>
+      <name>Gha Vira</name>
+      <name>Ygra</name>
+      <name>Delme Inae</name>
+      <name>Ullu</name>
+      <name>Midhak</name>
+      <name>Nucleosis</name>
+      <name>Quanton</name>
+      <name>Protum</name>
+      <name>Cadence</name>
+      <name>Aria</name>
+      <name>Eli</name>
+      <name>Nocturna</name>
+      <name>Dorian</name>
+      <name>Coda</name>
+    </names_part1>
+    <names_part2>
+      <name>Ventures</name>
+      <name>Incorporated</name>
+      <name>Corporation</name>
+      <name>Systems</name>
+      <name>Industries</name>
+      <name>Construction</name>
+      <name>Traders</name>
+      <name>Limited</name>
+      <name>Associates</name>
+      <name>Partners</name>
+      <name>Trust</name>
+      <name>Works</name>
+      <name>Corp.</name>
+      <name>And Company</name>
+      <name>Alliance</name>
+      <name>Technologies</name>
+      <name>Group</name>
+      <name>Interplanetary</name>
+      <name>Dynamics</name>
+      <name>Enterprises</name>
+      <name>Solutions</name>
+      <name>Scientific</name>
+    </names_part2>
+  </corporations>
+
+  <loading_bar_entries timeBetweenLoadingMessages="1">
+    <entry>Calcolo dei ricavi del quadrimestre...</entry>
+    <entry>Contatto gli azionisti...</entry>
+    <entry>Violo i codici di sicurezza...</entry>
+    <entry>Soddisfo gli azionisti...</entry>
+    <entry>Conteggio i voti degli azionisti...</entry>
+    <entry>Investo nelle imprese...</entry>
+    <entry>Esigo i tributi...</entry>
+    <entry>Vendo le azioni...</entry>
+    <entry>Allento i regolamenti...</entry>
+    <entry>Deregolamento i settori...</entry>
+    <entry>Negoziamento dei contratti...</entry>
+    <entry>Infrango i contratti...</entry>
+    <entry>Previsione dei profitti...</entry>
+    <entry>Compro i future...</entry>
+    <entry>Arbitraggio delle risorse...</entry>
+    <entry>Accumulo delle risorse...</entry>
+    <entry>Avveleno le falde acquifere...</entry>
+    <entry>Rilascio dei fumi...</entry>
+    <entry>Ricatto gli influenzabili...</entry>
+    <entry>Omicidio dei competitor...</entry>
+    <entry>Attraggo i coloni...</entry>
+    <entry>Infiltro i gruppi ribelli...</entry>
+    <entry>Creo compagnie prestanome...</entry>
+    <entry>Consolido le organizzazioni...</entry>
+    <entry>Monopolizzo i settori...</entry>
+    <entry>Aumento i proventi commerciali...</entry>
+    <entry>Applico tariffe ingannevoli...</entry>
+    <entry>Assumo contractor...</entry>
+    <!--<entry>Firing workers...</entry>-->
+    <entry>Compio acquisizioni ostili...</entry>
+    <entry>Assorbo i competitor...</entry>
+    <entry>Saboto i complessi...</entry>
+    <entry>Monetizzo le meccaniche di sorpresa...</entry>
+  </loading_bar_entries>
+</ui>
+
