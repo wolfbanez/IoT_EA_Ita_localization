@@ -19,7 +19,7 @@ Our goal is to provide most, if not all the translatable text in the game.
 
 Localized files will have a version file to identify what version of the game was used to translate them, in case the files are changed with the game updating.
 
-CURRENT LOCALIZED VERSION: 0.1.14
+>>> CURRENT LOCALIZED VERSION: 0.2.0 <<<
 
 HOW TO INSTALL Localization
 
@@ -35,3 +35,4 @@ HOW TO BE NOTIFIED OF UPDATES
 
 Go to Settings -> Notifications and enter your email address to receive updates for the localization! (I hope it works!)
 
+PAY ATTENTION: if the game crashes while using the translation, look if you have the latest translation installed and try eventually to put the original english files before sending a bugsplat. I'm trying to preserve at best the game files, but errors could occur

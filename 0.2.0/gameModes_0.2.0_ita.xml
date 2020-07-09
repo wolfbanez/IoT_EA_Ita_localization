@@ -1,0 +1,47 @@
+﻿<game_modes>
+	<game_mode id="standard">
+		<name>Standard</name>
+		<subtitle1>Difficoltà dinamica</subtitle1>
+		<subtitle2>La maniera principale di giocare.</subtitle2>
+		<description>Nella modalità Standard, le aggressioni dei nemici si basano sulla tua performance come Corporazione.</description>
+		<difficulty_description>Determina l'aggressività dei nemici in base alla tua performance.</difficulty_description>
+		<difficulties>
+			<difficulty>Facile</difficulty>
+			<difficulty default="true">Normale</difficulty>
+			<difficulty>Difficile</difficulty>
+			<difficulty>Titanica</difficulty>
+		</difficulties>
+		<button_label>Seleziona|Standard</button_label>
+		<image_path>Texture2D'/Game/UI/Textures/T_UI_StandardMode_01.T_UI_StandardMode_01'</image_path>
+		<color>#BF7F0FFF</color>
+	</game_mode>
+
+	<game_mode id="survival">
+		<name>Sopravvivenza</name>
+		<subtitle1>Difficoltà crescente</subtitle1>
+		<subtitle2>A un certo punto morirai.</subtitle2>
+		<description>In modalità Sopravvivenza, i nemici saranno sempre più forti col passare del tempo.</description>
+		<difficulty_description>Determina il tasso di difficoltà crescente dei nemici nel tempo.</difficulty_description>
+		<difficulties>
+			<difficulty>Facile</difficulty>
+			<difficulty default="true">Normale</difficulty>
+			<difficulty>Difficile</difficulty>
+			<difficulty>Titanica</difficulty>
+		</difficulties>
+		<image_path>Texture2D'/Game/UI/Textures/T_UI_SurvivalMode_01.T_UI_SurvivalMode_01'</image_path>
+		<button_label>Seleziona|Sopravvivenza</button_label>
+		<color>#6C0E03FF</color>
+	</game_mode>
+
+	<game_mode id="zen">
+		<name>Zen</name>
+		<subtitle1>Nessun nemico</subtitle1>
+		<subtitle2>Puoi giocare pacificamente.</subtitle2>
+		<description>Nella modalità Zen, puoi gestire la tua Corporazione senza nemici che ti attaccano.</description>
+		<difficulty_description>Puoi giocare alla modalità Zen sono con le impostazioni predefinite.</difficulty_description>
+		<image_path>Texture2D'/Game/UI/Textures/T_UI_ZenMode_01.T_UI_ZenMode_01'</image_path>
+		<button_label>Seleziona|Zen</button_label>
+		<color>#005B70FF</color>
+	</game_mode>
+</game_modes>
+
