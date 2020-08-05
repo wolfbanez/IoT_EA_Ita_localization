@@ -1,0 +1,118 @@
+<dialog>
+	<speakers>
+		<speaker>
+			<id>Councilwoman</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/Council_A_Idle_V.Council_A_Idle_V'</video>
+			<displayName>*The Council - Aenar Pyr*</displayName>
+			<name>Aenar Pyr</name>
+			<title>The Council</title>
+			<description>Description of the council's role</description>
+			<backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|councilEconomist</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Waste</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/WasteManager_Idle_V.WasteManager_Idle_V'</video>
+			<displayName>*Waste Management Officer - Vern Skoll*</displayName>
+			<name>Vern Skoll</name>
+			<title>Waste Management</title>
+			<description>Description of the Waste management officer's role</description>
+			<backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|wasteManagementOfficer</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Population</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/HeadOfHumanAssets_Idle_V.HeadOfHumanAssets_Idle_V'</video>
+			<displayName>*Head of Human Assets - Laiyo Visk*</displayName>
+			<name>Laiyo Visk</name>
+			<title>Head of Human Assets</title>
+			<description>Description of the Head of Human Assets' role</description>
+			<backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|headOfHumanAssets</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Corporation</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/CorpMonitor_Idle_V.CorpMonitor_Idle_V'</video>
+			<displayName>*Corporation Monitor - Sciaro Hess*</displayName>
+			<name>Sciaro Hess</name>
+			<title>Corporation Monitor</title>
+			<description>Description of the corp monitor's role.</description>
+			<backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|corporateMonitor</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Admiral</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/Admiral_Idle_V.Admiral_Idle_V'</video>
+			<displayName>*The Admiral - Alexa Carrick*</displayName>
+			<name>Alexa Carrick</name>
+			<title>The Admiral</title>
+			<description>Description of the Admiral's role.</description>
+			<backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|admiral</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>SNES</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/AiEnemy_Idle_V.AiEnemy_Idle_V'</video>
+			<displayName>*Super Nintendo Guy - Node 0.8.2*</displayName>
+			<name>Node 0.8.2</name>
+			<title>Super Nintendo Guy</title>
+			<backgroundEvent></backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Rebel</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/RebelLeader_Idle_V.RebelLeader_Idle_V'</video>
+			<displayName>*Rebel Leader - Szoren Coroba*</displayName>
+			<name>Szoren Coroba</name>
+			<title>Rebel Leader</title>
+			<backgroundEvent></backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Spaceport</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/SpaceStation_Idle_V.SpaceStation_Idle_V'</video>
+			<displayName>*Space Station Operator - Urlan Fletch*</displayName>
+			<name>Urlan Fletch</name>
+			<title>Space Station Operator</title>
+			<description>Description of the space station operator's role</description>
+			<backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|spaceportOperator</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Power</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/PowerEngineer_Idle_V.PowerEngineer_Idle_V'</video>
+			<displayName>*Power Systems Engineer - Ayana Ohk*</displayName>
+			<name>Ayana Ohk</name>
+			<title>Power Systems Engineer</title>
+			<description>Description of the power system engineer's </description>
+			<backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|powerEngineer</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Logistics</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/LogisticsOfficer_Idle_V.LogisticsOfficer_Idle_V'</video>
+			<displayName>*Chief Logistics Officer*</displayName>
+			<name>Sola Irala</name>
+			<title>Chief Logistics Officer</title>
+			<description>Description of the logistics thing</description>
+			<backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|chiefLogisticsOfficer</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>RebelA</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/RebelLeader_A_Idle_V.RebelLeader_A_Idle_V'</video>
+			<displayName>*Rebel Leader - Unidentified*</displayName>
+			<name>Unidentified</name>
+			<title>Rebel Leader</title>
+			<backgroundEvent></backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Rebel2</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/RebelLeader_A_Idle_V.RebelLeader_A_Idle_V'</video>
+			<displayName>*Rebel Leader - Bahar Coroba*</displayName>
+			<name>Bahar Coroba</name>
+			<title>Rebel Leader</title>
+			<backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|rebelLeaderA</backgroundEvent>
+		</speaker>
+		<speaker>
+			<id>Corrupted</id>
+			<video>FileMediaSource'/Game/UI/HUD/EventLog/CorruptedSignal_Idle_V.CorruptedSignal_Idle_V'</video>
+			<displayName>*Corrupted Signal*</displayName>
+			<name>Corrupted Signal</name>
+			<title>???</title>
+			<backgroundEvent>ui_dialog_window_loop_faction01|ui_dialog_window_loop|corrupted</backgroundEvent>
+		</speaker>
+	</speakers>
+
+	<dialog_entries delayBetweenQueuedEntries="3" />
+</dialog>

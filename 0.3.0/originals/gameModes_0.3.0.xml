@@ -1,0 +1,47 @@
+<game_modes>
+	<game_mode id="standard">
+		<name>Standard</name>
+		<subtitle1>Dynamic Difficulty</subtitle1>
+		<subtitle2>The intended way to play.</subtitle2>
+		<description>In Standard Mode, enemy aggression is based off your performance as a corporation.</description>
+		<difficulty_description>Determines how aggressive enemies will be in response to your performance.</difficulty_description>
+		<difficulties>
+			<difficulty>Easy</difficulty>
+			<difficulty default="true">Normal</difficulty>
+			<difficulty>Hard</difficulty>
+			<difficulty>Titan</difficulty>
+		</difficulties>
+		<button_label>Select Standard</button_label>
+		<image_path>Texture2D'/Game/UI/Textures/T_UI_StandardMode_01.T_UI_StandardMode_01'</image_path>
+		<color>#BF7F0FFF</color>
+	</game_mode>
+
+	<game_mode id="survival">
+		<name>Survival</name>
+		<subtitle1>Increasing Difficulty</subtitle1>
+		<subtitle2>You will die eventually.</subtitle2>
+		<description>In Survival Mode, enemies will become increasingly stronger as time passes.</description>
+		<difficulty_description>Determines rate of increasing enemy difficulty over time.</difficulty_description>
+		<difficulties>
+			<difficulty>Easy</difficulty>
+			<difficulty default="true">Normal</difficulty>
+			<difficulty>Hard</difficulty>
+			<difficulty>Titan</difficulty>
+		</difficulties>
+		<image_path>Texture2D'/Game/UI/Textures/T_UI_SurvivalMode_01.T_UI_SurvivalMode_01'</image_path>
+		<button_label>Select Survival</button_label>
+		<color>#6C0E03FF</color>
+	</game_mode>
+
+	<game_mode id="zen">
+		<name>Zen</name>
+		<subtitle1>No Enemy Attackers</subtitle1>
+		<subtitle2>You can play peacefully.</subtitle2>
+		<description>In Zen mode, you can manage your corporation without enemy attackers.</description>
+		<difficulty_description>You can currently only play Zen Mode at the default setting.</difficulty_description>
+		<image_path>Texture2D'/Game/UI/Textures/T_UI_ZenMode_01.T_UI_ZenMode_01'</image_path>
+		<button_label>Select|Zen</button_label>
+		<color>#005B70FF</color>
+	</game_mode>
+</game_modes>
+

@@ -20,8 +20,9 @@ Our goal is to provide most, if not all the translatable text in the game.
 Localized files will have a version file to identify what version of the game was used to translate them, in case the files are changed with the game updating.
 
 
->>> CURRENT LOCALIZED VERSION: 0.2.2 <<<
+>>> CURRENT LOCALIZED VERSION: 0.3.0 <<<
 
+Didn't have time to test the translation, I'll have a look with the other versions!
 
 HOW TO INSTALL Localization
 

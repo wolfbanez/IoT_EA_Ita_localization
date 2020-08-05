@@ -1,0 +1,42 @@
+<factions>
+	<faction id="landfallers">
+		<name>Landfallers</name>
+		<gameplayText>- 1 Headquarters
+			|- 5 Employees
+			|- 5 Minerals, 0 Isotopes, 100 Credits
+			|- 20 Influence
+			|- 3x3 Territory</gameplayText>
+			<loreText>_As the Titan "*gold rush*" ramped up, many startups and corporations from *Earth*, *Mars*, and the *asteroid belt* have scrambled to snap up ruin-rich land and start their own urban businesses. 
+			|
+			|The *Landfallers* faction is this swirling, leaderless group of striving hopefuls from across the System. They're people who dreamed big and have probably tasted failure. They also share a common 			*hyper-capitalist culture*. *Landfallers* are motivated by their perilous position and the powerful rewards of success. 
+			|
+			|Every once in a while, these ventures can be incredibly successful. A few are already on their way to becoming full-fledged Factions on Titan. 
+			|
+			|*Will you be the one who leads them to System dominance?*_</loreText>
+		<video>FileMediaSource'/Game/UI/MainMenu/FactionSelect_Default_V.FactionSelect_Default_V'</video>
+		<!-- TODO: Define gameplay perks -->
+	</faction>
+	<faction id="utopians" locked="true">
+		<name>\[redacted\]</name>
+		<loreText>_\[redacted\]_\\[redacted/]CORPORATION[redacted/]\\1-5.3p2
+			|_\[redacted\]_.48-6.A3\\0.7g9
+			|_\[redacted\]_5-9.q44\\_UNKNOWN_:
+			|_\[redacted\]__SR_07;3-2.2
+			|
+			|_\[redacted\]__dd-37_...
+			|_\[redacted\]__.ret_;
+			|
+			|_\[redacted\]\\...
+			|_..._
+			|_..._
+			|_..._</loreText>
+		<gameplayText>_\[redacted\]_7h-0;6\\[redacted/]_coming_\\-5.5
+			|_\[redacted\]_i;1.3-_early_:7.g1;
+			|_\[redacted\]_\\_access_:...
+			|_..._
+			|_..._</gameplayText>
+		<video>FileMediaSource'/Game/UI/MainMenu/FactionSelect_Locked_V.FactionSelect_Locked_V'</video>
+		<!-- TODO: Define gameplay perks -->
+	</faction>
+</factions>
+
