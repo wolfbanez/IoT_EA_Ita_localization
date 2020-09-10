@@ -12,7 +12,7 @@ Our goal is to provide most, if not all the translatable text in the game.
 Localized files will be in a "version" directory, to identify what version of the game they localize. The game can still run if the version is updated, you'll only get some unlocalized strings.
 
 
->>> CURRENT LOCALIZED VERSION: 0.4.0 <<<
+>>> CURRENT LOCALIZED STABLE VERSION: 0.4.3 <<<
 
 HOW TO INSTALL Localization
 
