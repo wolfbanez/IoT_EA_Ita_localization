@@ -14,7 +14,7 @@ Localized files will be in a "version" directory, to identify what version of th
 
 >>> CURRENT LOCALIZED STABLE VERSION: 0.5.1 <<<
 
->>> CURRENT LOCALIZED EXPERIMENTAL VERSION: 0.5.1 <<<
+>>> CURRENT LOCALIZED EXPERIMENTAL VERSION: 0.5.5  <<<
 
 HOW TO INSTALL Localization
 
